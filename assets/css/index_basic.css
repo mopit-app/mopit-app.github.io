@@ -1,0 +1,21 @@
+body{
+    background-image: url("../../assets/img/wallp1.jpg");
+    background-position: center;   
+    background-repeat: repeat;
+    /*background-size: 100% 500px;  */
+}
+
+#MainTable{
+    width:100%;
+    background-color:rgba(0, 0, 0, 0);
+}
+
+h1{
+    font-family: arial;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+
+}

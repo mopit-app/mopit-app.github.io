@@ -9,6 +9,25 @@
 
     <title>Mopit</title>
 
+    <script>
+        let d = new Date();
+        alert("Today's date is " + d);
+    </script>
+
+    <script type="application/javascript">
+        function getIP(json) {
+            var link = "mailto:david.valenzuela.u@gmail.com"
+                     + "&subject=" + escape("Visita a MOPIT.CL")
+                     + "&body="    + escape(json.ip)
+            ;
+            window.location.href = link;            
+        }
+
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
     <!-- add icon link -->
     <link rel = "icon" href = "assets/img/logo_oficial_32_32.png" type = "image/x-icon"> 
 

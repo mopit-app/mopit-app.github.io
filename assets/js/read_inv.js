@@ -12,5 +12,6 @@ $('#inv_form').on('submit', function(e) { //use on if jQuery 1.7+
     }
     else{
         console.log("Código incorrecto");
+        alert("Acceso denegado");
     }
 });

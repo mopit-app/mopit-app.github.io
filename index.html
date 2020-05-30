@@ -9,24 +9,7 @@
 
     <title>Mopit</title>
 
-    <script>
-        let d = new Date();
-        alert("Today's date is " + d);
-    </script>
-
-    <script type="application/javascript">
-        function getIP(json) {
-            var link = "mailto:david.valenzuela.u@gmail.com"
-                     + "&subject=" + escape("Visita a MOPIT.CL")
-                     + "&body="    + escape(json.ip)
-            ;
-            window.location.href = link;            
-        }
-
-    </script>
-
-    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
+    <script src="assets/vendor/jquery/jquery.min.js"></script> <!-- Definiciones iniciales jQuery -->
 
     <!-- add icon link -->
     <link rel = "icon" href = "assets/img/logo_oficial_32_32.png" type = "image/x-icon"> 
@@ -56,8 +39,13 @@
       </tr>
       <tr>
         <th></th>
+        <th>  <h4><div class="myinput"></div></h4> </th>          
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
         <th>
-            <form action="val_code.php" id="usrform">
+            <form method="POST" id="inv_form">
                 <h4>Invitation code:</h4> <input type="text" name="inv_code"> <input type="submit">
             </form>
         </th>
@@ -70,6 +58,9 @@
       </tr>
 
     </table>
+
+    <script src="assets/js/get_ip.js"></script>
+    <script src="assets/js/read_inv.js"></script>
 
 </body>
 

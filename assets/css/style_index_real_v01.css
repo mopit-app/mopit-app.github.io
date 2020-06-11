@@ -6,19 +6,31 @@
 */
 
 /*--------------------------------------------------------------
+# COLORES
+--------------------------------------------------------------*/
+
+:root {
+  --azul-mopit-01: #0e75fd;
+  --azul-mopit-02: #0ec5fd;
+  --azul-mopit-03: #0e0c6e;
+  --azul-mopit-04: #f2fffe;
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #fd680e;
+  color: var(azul_mopit_01);
 }
 
 a:hover {
-  color: #ff8f4c;
+  color: var(azul_mopit_02);
   text-decoration: none;
 }
 
@@ -88,14 +100,14 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #ffd2b7;
+  color: #0ec5fd;
   padding: 10px 20px;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #ffa26a;
+  color: #f2fffe;
   text-decoration: none;
 }
 
@@ -159,7 +171,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("../img/hero-bg.jpg") center center;
+  /*background: url("../img/hero-bg.jpg") center center;*/
+  background: url("../img/wallp2.jpg") center center;
   background-size: cover;
   position: relative;
   margin-top: -80px;
@@ -181,18 +194,33 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero h1 {
+  /*
   margin: 0 0 10px 0;
   font-size: 48px;
   font-weight: 400;
   line-height: 56px;
   line-height: 56px;
   color: #222;
+  */
+  font-family: arial;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
 }
 
 #hero h2 {
+  /*
   color: #333;
   margin-bottom: 30px;
   font-size: 24px;
+  */
+  font-family: arial;
+  font-size: 30px;
+  font-weight: 50;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
 }
 
 #hero .php-email-form .validate {
@@ -283,11 +311,11 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   margin: 10px;
   border: none;
   color: #fff;
-  background: #fd680e;
+  background: #0e75fd;
 }
 
 #hero .php-email-form button[type="submit"]:hover {
-  background: #fd8841;
+  background: #0ec5fd;
 }
 
 @media (min-width: 1024px) {
@@ -319,7 +347,7 @@ section {
 }
 
 .section-bg {
-  background-color: #fff7f2;
+  background-color: #f2fffe;
 }
 
 .section-title {
@@ -341,7 +369,7 @@ section {
   display: block;
   width: 80px;
   height: 1px;
-  background: #fd680e;
+  background: #0e75fd;
   bottom: 0;
   left: calc(50% - 40px);
 }
@@ -372,7 +400,7 @@ section {
 .about ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #fd680e;
+  color: #0e75fd;
 }
 
 .about p:last-child {
@@ -405,7 +433,7 @@ section {
   height: 64px;
   padding-top: 10px;
   text-align: center;
-  background-color: #fd680e;
+  background-color: #0e75fd;
   border-radius: 50%;
   text-align: center;
   border: 4px solid #fff;
@@ -423,11 +451,11 @@ section {
 }
 
 .why-us .card-title a {
-  color: #743e1d;
+  color: #0e0c6e;
 }
 
 .why-us .card-title a:hover {
-  color: #fd680e;
+  color: #0e75fd;
 }
 
 .why-us .card-text {
@@ -436,7 +464,7 @@ section {
 
 .why-us .card:hover .card-icon i {
   background: #fff;
-  color: #fd680e;
+  color: #0e75fd;
 }
 
 @media (max-width: 1024px) {
@@ -466,7 +494,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #fd680e;
+  font-family: #0e75fd;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -494,7 +522,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #fd680e;
+  color: #0e75fd;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -514,7 +542,7 @@ section {
 
 .contact .info i {
   font-size: 32px;
-  color: #fd680e;
+  color: #0e75fd;
   float: left;
 }
 
@@ -532,7 +560,7 @@ section {
 .contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5a2c10;
+  background: #0e0c6e;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -544,7 +572,7 @@ section {
 }
 
 .contact .social-links a:hover {
-  background: #fd680e;
+  background: #0e75fd;
   color: #fff;
 }
 
@@ -601,11 +629,11 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #fd680e;
+  border-color: #0e75fd;
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #fd680e;
+  background: #0e75fd;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -613,7 +641,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #fd8841;
+  background: #0ec5fd;
 }
 
 @media (max-width: 768px) {
@@ -644,7 +672,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #2f1708;
+  background: #0e0c6e;
   padding: 30px 0;
   color: #fff;
   font-size: 14px;

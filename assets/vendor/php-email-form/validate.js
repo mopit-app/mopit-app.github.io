@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
   //Contact
   $('form.php-email-form').submit(function() {
-   
+    console.log("form.php-email-form");
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
@@ -58,8 +58,9 @@ jQuery(document).ready(function($) {
         i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    f.children('textarea').each(function() { // run all inputs
 
+    f.children('textarea').each(function() { // run all inputs
+      console.log("textarea");
       var i = $(this); // current input
       var rule = i.attr('data-rule');
 
@@ -89,21 +90,29 @@ jQuery(document).ready(function($) {
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    if (ferror) return false;
-    else var str = $(this).serialize();
+
+    if (ferror){
+      console.log("ferror: FORMULARIO INVÁLIDO!");
+      return false;
+    } else{
+      console.log("FORMULARIO VALIDADO! -> OK");
+      var str = $(this).serialize();
+    }
 
     var this_form = $(this);
     var action = $(this).attr('action');
 
     if( ! action ) {
+      console.log("! action");
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
       return false;
     }
     
-    this_form.find('.sent-message').slideUp();
-    this_form.find('.error-message').slideUp();
-    this_form.find('.loading').slideDown();
+    console.log("Formulario enviado!");
+    this_form.find('.sent-message').slideDown(1000);
+    //this_form.find('.error-message').slideUp();
+    //this_form.find('.loading').slideDown();
     
     $.ajax({
       type: "POST",
@@ -114,12 +123,16 @@ jQuery(document).ready(function($) {
           this_form.find('.loading').slideUp();
           this_form.find('.sent-message').slideDown();
           this_form.find("input:not(input[type=submit]), textarea").val('');
+          console.log("msg == OK");
+
         } else {
           this_form.find('.loading').slideUp();
           this_form.find('.error-message').slideDown().html(msg);
+          console.log("msg != OK");
         }
       }
     });
+    
     return false;
   });
 

@@ -688,3 +688,8 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+/* HONEYPOT for FORMS*/
+.hpot {
+  display: none;
+}
